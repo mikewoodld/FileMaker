@@ -11,6 +11,6 @@ https://www.claris.com/trial/
 
 https://www.monkeybreadsoftware.com/filemaker/
 
-## FileMaker GO iOS App'
+## FileMaker GO iOS App
 
 https://apps.apple.com/us/app/claris-filemaker-go-19/id1484857908
