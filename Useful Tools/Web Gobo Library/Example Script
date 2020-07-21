@@ -37,24 +37,23 @@
 Set Error Capture [ On ]
 # #####################################################
 # -----------------------------------------------------
-# 
-# 
+
+
 # Sets variables
 #      Gets only text characters
 Set Variable [ $company ; Value: Filter ( Gobos::Gobo Name ; "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ) ] 
 #      Gets only integers
 Set Variable [ $number ; Value: GetAsNumber ( Gobos::Gobo Name ) ] 
-# 
-# 
+
+
 # Gets rid of size, if there's a size appended to the end of the gobo
 Set Variable [ $length ; Value: Length($company) ] 
 If [ $length>1 ] 
 #      truncates $company to be only the first text character
 Set Variable [ $company ; Value: Left ( $company ; 1 ) ] 
 End If
-# 
-# 
-# 
+
+
 # sets company to use in URL
 If [ ($company="g") ] 
 Set Variable [ $company ; Value: "gam" ] 
@@ -66,19 +65,16 @@ Else If [ ($company="a") or ($company="m") ]
 Set Variable [ $company ; Value: "apollo" ] 
 Set Variable [ $letter ; Value: "a" ] 
 End If
-# 
+
 # uppercases the letter for the URL/Filename
 Set Variable [ $letter ; Value: Upper($letter) ] 
-# 
+
 # creates our URL
 Set Variable [ $url ; Value: "https://www.lightingpaperwork.com/gobos/"&$company&"/"&$letter&$number&".jpg" ] 
-# 
-# 
+
 # inserts image into field
 Insert from URL [ Select ; With dialog: Off ; Target: Gobos::Gobo Image ; $url ] 
-# 
-# 
-# 
+
 # checks to see if image was properly inserted
 If [ IsEmpty ( GetContainerAttribute ( Gobos::Gobo Image ; "image" ) ) ] 
 # If image is not in container
@@ -106,4 +102,4 @@ Else
 Set Field [ Gobos::Gobo Image ; "" ] 
 End If
 End If
-# 
+
