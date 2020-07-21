@@ -52,6 +52,8 @@ The URL is calculated as follows:
             
 Eventually, all the images will be jpg and I'll get rid of the png stuff from the code.
 
+If you find this useful, please consider saying thank you on www.patreon.com/mikewoodld, https://www.paypal.me/mikewoodld, or https://venmo.com/mikewoodld
+
 
 Enjoy!
             
