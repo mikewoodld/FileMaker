@@ -42,7 +42,7 @@ The URL is calculated as follows:
             http://www.lightingpaperwork.com/gobos/$company/$letter$number.jpg (or .png)
             
             $company - rosco, gam, or apollo. Calculated automatically based on first text character in field.
-            $letter - G, R, A, M - again, automatically calculated
+            $letter - G, R, A, M - again, automatically calculated. There is an "upper" script step that makes sure it is uppercase.
             $number - the number of the gobo itself
             .jpg or .png - file extension (see notes earlier about checking for pngs)
             
