@@ -13,4 +13,27 @@ I moved all my gobo images over to a public directory and then wrote a FileMaker
 
 - 2 fields: "Gobo Name" (text) and "Gobo Image" (container
 
+- Rosco, Gam, and Apollo gobos
+
 <h2>How it works</h2>
+
+The script works by inserting an image based on a calculated URL. The URL is calculated using the "gobo name" field in your table. 
+I wanted to make the script as user-proof as possible, as different people have different ways of labeling their gobos. 
+
+There is documentation at the top of the script itself, but I'll summarize here as well:
+Essentially, the only rule that you need to be aware of is that the first occurence of a text character in your "gobo name" field must be R,G,A, or M. The script only cares about that very first text character. It does not matter what position that character is in in your overall name. For example:
+
+G579, GAM579, G-579, GAM-579, G579A, G579B, G579-A
+
+All return the same result. 
+
+You can simplify this script a lot if you commit to only using gobo names that are formatted the exact same way as they're found in the gobo directory at https://www.lightingpaperwork.com/gobos, but we all know that people have different preferences. 
+
+
+Most all of the gobos on the site are saved as .jpgs, but there are a few Roscos that at PNGs. (More on this in a bit)
+
+At the end of the script, it checks to see if the container has anything in it. If it doesn't, it automatically tries again using the .png extension. Then it checks again. If it still doesn't have anything in it, a user-prompt appears asking the user what they'd like to do. There are three options:
+
+1) Search google for the gobo (this uses a separate script, but it really doesn't need to.)
+2) Cancel
+3) Alert Mike (via email) that the gobo is missing - this really won't help you immediately, but it lets me know that there's a gobo missing so I can add it later. 
