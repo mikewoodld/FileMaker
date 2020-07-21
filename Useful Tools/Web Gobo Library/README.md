@@ -6,8 +6,11 @@ I wanted to create a way to automatically insert a gobo image into a gobo image 
 I moved all my gobo images over to a public directory and then wrote a FileMaker script that can pull the image into a container. 
 
 <h2>What you need</h2>
+
 - Working internet connection
+
 - FileMaker solution built with at least a Gobos Table
+
 - 2 fields: "Gobo Name" (text) and "Gobo Image" (container
 
 <h2>How it works</h2>
