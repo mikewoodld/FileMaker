@@ -32,7 +32,7 @@ All return the same result.
 You can simplify this script a lot if you commit to only using gobo names that are formatted the exact same way as they're found in the gobo directory at https://www.lightingpaperwork.com/gobos, but we all know that people have different preferences. 
 
 
-Most all of the gobos on the site are saved as .jpgs, but there are a few Roscos that at PNGs. (More on this in a bit)
+Most all of the gobos on the site are saved as .jpgs, but there are a few Roscos that are PNGs. (More on this in a bit)
 
 At the end of the script, it checks to see if the container has anything in it. If it doesn't, it automatically tries again using the .png extension. Then it checks again. If it still doesn't have anything in it, a user-prompt appears asking the user what they'd like to do. There are three options:
 
