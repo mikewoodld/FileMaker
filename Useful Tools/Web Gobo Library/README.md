@@ -25,7 +25,7 @@ I wanted to make the script as user-proof as possible, as different people have 
 There is documentation at the top of the script itself, but I'll summarize here as well:
 Essentially, the only rule that you need to be aware of is that the first occurence of a text character in your "gobo name" field must be R,G,A, or M. The script only cares about that very first text character. It does not matter what position that character is in in your overall name. For example:
 
-G579, GAM579, G-579, GAM-579, G579A, G579B, G579-A
+G579, GAM579, G-579, GAM-579, G579A, G579B, G579-A, 579G, 579GAM, 579GAMYAYYYYYY
 
 All return the same result. 
 
