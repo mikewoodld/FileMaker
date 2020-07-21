@@ -37,3 +37,17 @@ At the end of the script, it checks to see if the container has anything in it. 
 1) Search google for the gobo (this uses a separate script, but it really doesn't need to.)
 2) Cancel
 3) Alert Mike (via email) that the gobo is missing - this really won't help you immediately, but it lets me know that there's a gobo missing so I can add it later. 
+
+The URL is calculated as follows:
+            http://www.lightingpaperwork.com/gobos/$company/$letter$number.jpg (or .png)
+            
+            $company - rosco, gam, or apollo. Calculated automatically based on first text character in field.
+            $letter - G, R, A, M - again, automatically calculated
+            $number - the number of the gobo itself
+            .jpg or .png - file extension (see notes earlier about checking for pngs)
+            
+Eventually, all the images will be jpg and I'll get rid of the png stuff from the code.
+
+
+Enjoy!
+            
