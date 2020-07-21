@@ -29,6 +29,8 @@ G579, GAM579, G-579, GAM-579, G579A, G579B, G579-A, 579G, 579GAM, 579GAMYAYYYYYY
 
 All return the same result. 
 
+While you can have as many/whatever characters you want after that first occurence, the only integers that can be in your "Gobo Name" field can be the actual gobo number. So you can't put a count, inventory, qty number, etc at the end of the field. 
+
 You can simplify this script a lot if you commit to only using gobo names that are formatted the exact same way as they're found in the gobo directory at https://www.lightingpaperwork.com/gobos, but we all know that people have different preferences. 
 
 
