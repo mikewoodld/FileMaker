@@ -38,7 +38,7 @@ Most all of the gobos on the site are saved as .jpgs, but there are a few Roscos
 
 At the end of the script, it checks to see if the container has anything in it. If it doesn't, it automatically tries again using the .png extension. Then it checks again. If it still doesn't have anything in it, a user-prompt appears asking the user what they'd like to do. There are three options:
 
-1) Search google for the gobo (this uses a separate script, but it really doesn't need to.)
+1) Search google for the gobo (this uses a separate script, but it really doesn't need to - you could easily just move those steps into this one)
 2) Cancel
 3) Alert Mike (via email) that the gobo is missing - this really won't help you immediately, but it lets me know that there's a gobo missing so I can add it later. 
 
