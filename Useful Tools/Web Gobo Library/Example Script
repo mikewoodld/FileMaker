@@ -58,7 +58,7 @@ End If
 If [ ($company="g") ] 
 Set Variable [ $company ; Value: "gam" ] 
 Set Variable [ $letter ; Value: "g" ] 
-Else If [ ($company="r") or ($company="rosco") ] 
+Else If [ ($company="r") ] 
 Set Variable [ $company ; Value: "rosco" ] 
 Set Variable [ $letter ; Value: "r" ] 
 Else If [ ($company="a") or ($company="m") ] 
