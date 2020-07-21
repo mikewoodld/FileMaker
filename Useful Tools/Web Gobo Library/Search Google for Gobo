@@ -1,0 +1,5 @@
+Set Variable [ $Gobo ; Value: Gobos::Gobo Name ] 
+Set Variable [ $Google ; Value: "https://www.google.com/search?q="&$Gobo&"+gobo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjmsofl5vHiAhWqc98KHatTB84Q_AUIESgC&biw=1282&bih=916" ] 
+
+Open URL [ With dialog: Off ; $Google ] 
+
