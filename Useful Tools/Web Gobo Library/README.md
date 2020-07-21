@@ -1,4 +1,6 @@
 In this directory, you will find information on how to use the gobo image library tool. 
+There is a .fmp12 demo file containing the scripts, as well as text and pdf versions of the scripts themselves.
+
 
 <h1>Introduction</h1>
 I wanted to create a way to automatically insert a gobo image into a gobo image container without having to search the internet each time for the image or create a storage-space-hungry table in my FileMaker solution. 
