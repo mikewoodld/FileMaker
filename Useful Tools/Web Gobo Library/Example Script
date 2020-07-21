@@ -1,0 +1,109 @@
+# -----------------------------------------------------
+# #####################################################
+# #####################################################
+# -----------------------------------------------------
+# 
+# © 2020 Mike Wood Lighting Design - http://www.lightingpaperwork.com
+# 
+# 
+#        This script searches lightingpaperwork.com for gobo images based off of gobo name in records
+#             http://www.lightingpaperwork.com/gobos/$company/$letter$number.jpg (or .png)
+# 
+#        It handles GAM, ROSCO, and APOLLO
+# 
+#        Gobo name type is determined by the first occurence of a letter in the Gobo Name field.
+#                  R - Rosco
+#                  G - Gam
+#                  A - Apollo
+#                  M - Apollo (for gobos starting in MS)
+# 
+#             The rest of the letters in the field do not matter.
+# 
+#             The letter does not need to be the first character in the field, however.
+#                  Example:
+#                     Gobo Image = "G579"   |   Gobo Image = "579GAM"      |   Gobo Image = "GAM579"   
+#                     All yield the same results:
+#                       Company: G
+#                       Number: 579
+# 
+#             Adding a size to the end of your field does not matter, it will ignore any text character that is not the first text character occurrence.
+# 
+#             The gobo library is in no way complete. If you find a missing gobo, please let Mike know.
+# 
+# 
+# 
+# -----------------------------------------------------
+# #####################################################
+Set Error Capture [ On ]
+# #####################################################
+# -----------------------------------------------------
+# 
+# 
+# Sets variables
+#      Gets only text characters
+Set Variable [ $company ; Value: Filter ( Gobos::Gobo Name ; "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ) ] 
+#      Gets only integers
+Set Variable [ $number ; Value: GetAsNumber ( Gobos::Gobo Name ) ] 
+# 
+# 
+# Gets rid of size, if there's a size appended to the end of the gobo
+Set Variable [ $length ; Value: Length($company) ] 
+If [ $length>1 ] 
+#      truncates $company to be only the first text character
+Set Variable [ $company ; Value: Left ( $company ; 1 ) ] 
+End If
+# 
+# 
+# 
+# sets company to use in URL
+If [ ($company="g") ] 
+Set Variable [ $company ; Value: "gam" ] 
+Set Variable [ $letter ; Value: "g" ] 
+Else If [ ($company="r") or ($company="rosco") ] 
+Set Variable [ $company ; Value: "rosco" ] 
+Set Variable [ $letter ; Value: "r" ] 
+Else If [ ($company="a") or ($company="m") ] 
+Set Variable [ $company ; Value: "apollo" ] 
+Set Variable [ $letter ; Value: "a" ] 
+End If
+# 
+# uppercases the letter for the URL/Filename
+Set Variable [ $letter ; Value: Upper($letter) ] 
+# 
+# creates our URL
+Set Variable [ $url ; Value: "https://www.lightingpaperwork.com/gobos/"&$company&"/"&$letter&$number&".jpg" ] 
+# 
+# 
+# inserts image into field
+Insert from URL [ Select ; With dialog: Off ; Target: Gobos::Gobo Image ; $url ] 
+# 
+# 
+# 
+# checks to see if image was properly inserted
+If [ IsEmpty ( GetContainerAttribute ( Gobos::Gobo Image ; "image" ) ) ] 
+# If image is not in container
+# first try to insert the png version (need to clean up server so that all files are jpg... one day)
+Set Variable [ $url ; Value: "https://www.lightingpaperwork.com/gobos/"&$company&"/"&$letter&$number&".png" ] 
+Insert from URL [ Select ; With dialog: Off ; Target: Gobos::Gobo Image ; $url ] 
+# Checks to see if that worked
+If [ IsEmpty ( GetContainerAttribute ( Gobos::Gobo Image ; "image" ) ) ] 
+Show Custom Dialog [ "This Gobo Doesn't Exist" ; "Looks like this gobo either doesn't exist on Mike's server or you might not be connected to the in…" ] 
+If [ Get ( LastMessageChoice )=1 ] 
+# Clears container and searches google for image
+Set Field [ Gobos::Gobo Image ; "" ] 
+Perform Script [ Specified: From list ; “Search Google For Gobo Image” ; Parameter:    ]
+Else If [ Get ( LastMessageChoice )=3 ] 
+# Clears container
+Set Field [ Gobos::Gobo Image ; "" ] 
+# emails Mike
+Send Mail [ Send via E-mail Client ; With dialog: On ; To: "gobos@mikewoodld.com" ; Subject: "Missing Gobo "&$company&$number ; Message: $url&" does not exist.¶¶Please add "&$Company&$Number&" to server." ] 
+Else
+# Clears container
+Set Field [ Gobos::Gobo Image ; "" ] 
+End If
+Else
+# Clears container
+Set Field [ Gobos::Gobo Image ; "" ] 
+End If
+End If
+# 
