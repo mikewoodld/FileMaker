@@ -23,7 +23,7 @@ The script works by inserting an image based on a calculated URL. The URL is cal
 I wanted to make the script as user-proof as possible, as different people have different ways of labeling their gobos. 
 
 There is documentation at the top of the script itself, but I'll summarize here as well:
-Essentially, the only rule that you need to be aware of is that the first occurence of a text character in your "gobo name" field must be R,G,A, or M. The script only cares about that very first text character. It does not matter what position that character is in in your overall name. For example:
+Essentially, the only rule that you need to be aware of is that the first occurence of a text character in your "gobo name" field must be R,G,A, or M. (M for those who label Apollo as "MS") The script only cares about that very first text character. It does not matter what position that character is in in your overall name. For example:
 
 G579, GAM579, G-579, GAM-579, G579A, G579B, G579-A, 579G, 579GAM, 579GAMYAYYYYYY
 
@@ -46,7 +46,7 @@ The URL is calculated as follows:
             http://www.lightingpaperwork.com/gobos/$company/$letter$number.jpg (or .png)
             
             $company - rosco, gam, or apollo. Calculated automatically based on first text character in field.
-            $letter - G, R, A, M - again, automatically calculated. There is an "upper" script step that makes sure it is uppercase.
+            $letter - G, R, A - again, automatically calculated. There is an "upper" script step that makes sure it is uppercase.
             $number - the number of the gobo itself
             .jpg or .png - file extension (see notes earlier about checking for pngs)
             
