@@ -21,4 +21,7 @@ If you want to use another character other than the block for your swatch, you c
 
 If you do change the character, you'll need to modify and then run the included script to update the "manual" records. 
 
-You can export these records (as a .mer) to import them into your FileMaker solution, but you'll need to recreate the database fields. See chapter 2.1 for info. 
+You can export these records (as a .mer) to import them into your FileMaker solution, but you'll need to recreate the database fields. See chapter 2.1 for info.
+
+<h3> IMPORTANT </h3>
+If you downloaded this file before 18:00 CST 07/23/2020, some swatches were broken. It has been updated/fixed. If you don't want to download the new version, there is a script in the old version that will automatically fix the swatches for you.
