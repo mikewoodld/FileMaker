@@ -57,6 +57,13 @@ You can edit various target text fields using this syntax:
      
      Will label List 1, Cue 5 (no parts) as "Blackout"
      
+     
+     
+     <U1> Edit_Target Label Cue 60000 1 20 MARK
+     
+     Will label List 1, Cue 6, Part 20 as "MARK"
+ 
+ 
  
  Editing Patch Information:
  
