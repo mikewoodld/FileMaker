@@ -55,13 +55,13 @@ You can edit various target text fields using this syntax:
  
      <U1> Edit_Target Label Cue 50000 1 -1 Blackout
      
-     Will label List 1, Cue 5 (no parts) as "Blackout"
+          Will label List 1, Cue 5 (no parts) as "Blackout"
      
      
      
      <U1> Edit_Target Label Cue 60000 1 20 MARK
      
-     Will label List 1, Cue 6, Part 20 as "MARK"
+          Will label List 1, Cue 6, Part 20 as "MARK"
  
  
  
@@ -69,22 +69,22 @@ You can edit various target text fields using this syntax:
  
      <U1>Edit_Target Label Patch 901 -1 -1 House Light
      
-     Labeled channel 901 as "House Light" in the patch
+          Labeled channel 901 as "House Light" in the patch
 
 
      <U1>Edit_Target Notes Patch 2 -1 -1 Note Here
      
-     Added "note here" as the note for channel 2 in the patch
+          Added "note here" as the note for channel 2 in the patch
       
             
      <U1>Edit_Target Gel Patch 50 -1 -1 R80
      
-     Set gel color to R80 for Channel 50 in Patch
+          Set gel color to R80 for Channel 50 in Patch
           
      
      <U1>Edit_Target Text1 Patch 61 -1 -1 Front Cool
      
-     Set Text1 Database label in Patch to "Front Cool"
+          Set Text1 Database label in Patch to "Front Cool"
      
 
 ## Forbidden Characters
