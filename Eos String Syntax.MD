@@ -67,22 +67,22 @@ You can edit various target text fields using this syntax:
  
  Editing Patch Information:
  
-     <U1>Edit_Target Label Patch 901 -1 -1 House Light
+     <U1> Edit_Target Label Patch 901 -1 -1 House Light
      
           Labeled channel 901 as "House Light" in the patch
 
 
-     <U1>Edit_Target Notes Patch 2 -1 -1 Note Here
+     <U1> Edit_Target Notes Patch 2 -1 -1 Note Here
      
           Added "note here" as the note for channel 2 in the patch
       
             
-     <U1>Edit_Target Gel Patch 50 -1 -1 R80
+     <U1> Edit_Target Gel Patch 50 -1 -1 R80
      
           Set gel color to R80 for Channel 50 in Patch
           
      
-     <U1>Edit_Target Text1 Patch 61 -1 -1 Front Cool
+     <U1> Edit_Target Text1 Patch 61 -1 -1 Front Cool
      
           Set Text1 Database label in Patch to "Front Cool"
      
@@ -90,3 +90,17 @@ You can edit various target text fields using this syntax:
 ## Forbidden Characters
 
 You cannot use # (hashtag/pound sign/number sign, depending on your generation) in any text field, as EOS sees that symbol as the termination of a command. As far as I know, there is no way to escape this character, so it's best just to not use it. 
+
+
+## Tips & Tricks
+
+Take advantage of being able to specify a user number for your commands. Some things can happen in the background, others you want to see on your command lines. Perhaps plan a separate user just for your FM solution, and then show that command line on a magic sheet. 
+
+## Why not OSC?
+
+This is not a substitute for OSC at all, it's just slightly easier to implement in FileMaker, at least as of this writing. There aren't any specific OSC plugins for FileMaker (yet.) You can send strings that look like OSC to eos using the plugins we've talked about in these sessions (MonkeyBreadSoftware) - for example, you can send /eos/user/1/key/1 and it will push that key - but at this time, there are some issues with how EOS treats some arguments. You can't send labels reliably,for example. These things are being worked on. In my solution, I use a combination of these old fashioned strings as well as strings that look like OSC. For example, there's not a string command to take the console to blind, but you CAN say /eos/user/1/blind/ - so it's a bit of both for me. Eventually once some of these things are changed/fixed, I will update this document with that information. 
+
+## Can I get data back into FM using this?
+
+You can enable "String MSC Tx" to get some event data back in via String UDP, but that's beyond the scope of this document. OSC is the way to go for incoming data, but it's not a simple implementation right now. Since there is no FM OSC plugin, I rely on Scott Tusing's OSC ReRouter to help. https://github.com/sktusing/OSC-ReRouter
+
