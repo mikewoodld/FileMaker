@@ -39,17 +39,17 @@ You can edit various target text fields using this syntax:
     <U#> Edit_Target <Field> <Target> <Number> <List Number> <Part Number> <Text>
     
 
-      Field: Label, Scene, Notes, Patch
+         Field: Label, Scene, Notes, Patch
   
-       Target: Cue, Submaster, Macro, ...
+         Target: Cue, Submaster, Macro, ...
   
-       Number: Target Number x 10,000
+         Number: Target Number x 10,000
   
-       List Number: List Number (if cue, otherwise -1)
+         List Number: List Number (if cue, otherwise -1)
   
-       Part Number: Part Number (if part, otherwise -1)
+         Part Number: Part Number (if part, otherwise -1)
   
-       Text: The text to send
+         Text: The text to send
        
  For Example:
  
