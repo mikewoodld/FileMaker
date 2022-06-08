@@ -34,6 +34,8 @@
 
 ## Edit_Target
 
+IMPORTANT NOTE: the target stuff below I believe now requires a # at the end to terminate the command. I will re-test soon but if something below doesn't work, add a # at the end and it should. 
+
 You can edit various target text fields using this syntax:
 
     <U#> Edit_Target <Field> <Target> <Number> <List Number> <Part Number> <Text>
