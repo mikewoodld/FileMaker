@@ -31,7 +31,7 @@
 
     <U1> $ patch #
     
- chanve the user number by changing the <U1> to whatever U number you want. The command will post to that user's command line. 
+ change the user number by changing the <U1> to whatever U number you want. The command will post to that user's command line. 
 
 
 ## Edit_Target
@@ -88,7 +88,7 @@ You can edit various target text fields using this syntax:
      
      <U1> Edit_Target Text1 Patch 61 -1 -1 Front Cool
      
-          Set Text1 Database label in Patch to "Front Cool"
+          Set Text1 Database label in Patch for channel 61 to "Front Cool"
      
 
 ## Forbidden Characters
