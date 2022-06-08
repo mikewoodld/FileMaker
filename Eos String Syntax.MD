@@ -30,6 +30,8 @@
   Entering Patch (takes console to blind):
 
     <U1> $ patch #
+    
+ chanve the user number by changing the <U1> to whatever U number you want. The command will post to that user's command line. 
 
 
 ## Edit_Target
