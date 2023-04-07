@@ -1,4 +1,4 @@
-# EOS String Syntax for various things (non-OSC)
+# Eos String Syntax for various things (non-OSC)
 
 ## Command Lines
 
