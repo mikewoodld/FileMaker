@@ -36,11 +36,10 @@
 
 ## Edit_Target
 
-IMPORTANT NOTE: the target stuff below I believe now requires a # at the end to terminate the command. I will re-test soon but if something below doesn't work, add a # at the end and it should. 
 
 You can edit various target text fields using this syntax:
 
-    <U#> Edit_Target <Field> <Target> <Number> <List Number> <Part Number> <Text>
+    <U#> Edit_Target <Field> <Target> <Number> <List Number> <Part Number> <Text> #
     
 
          Field: Label, Scene, Notes, Patch
@@ -57,13 +56,13 @@ You can edit various target text fields using this syntax:
        
  For Example:
  
-     <U1> Edit_Target Label Cue 50000 1 -1 Blackout
+     <U1> Edit_Target Label Cue 50000 1 -1 Blackout #
      
           Will label List 1, Cue 5 (no parts) as "Blackout"
      
      
      
-     <U1> Edit_Target Label Cue 60000 1 20 MARK
+     <U1> Edit_Target Label Cue 60000 1 20 MARK #
      
           Will label List 1, Cue 6, Part 20 as "MARK"
  
@@ -71,22 +70,22 @@ You can edit various target text fields using this syntax:
  
  Editing Patch Information:
  
-     <U1> Edit_Target Label Patch 901 -1 -1 House Light
+     <U1> Edit_Target Label Patch 901 -1 -1 House Light #
      
           Labeled channel 901 as "House Light" in the patch
 
 
-     <U1> Edit_Target Notes Patch 2 -1 -1 Note Here
+     <U1> Edit_Target Notes Patch 2 -1 -1 Note Here #
      
           Added "note here" as the note for channel 2 in the patch
       
             
-     <U1> Edit_Target Gel Patch 50 -1 -1 R80
+     <U1> Edit_Target Gel Patch 50 -1 -1 R80 #
      
           Set gel color to R80 for Channel 50 in Patch
           
      
-     <U1> Edit_Target Text1 Patch 61 -1 -1 Front Cool
+     <U1> Edit_Target Text1 Patch 61 -1 -1 Front Cool #
      
           Set Text1 Database label in Patch for channel 61 to "Front Cool"
      
