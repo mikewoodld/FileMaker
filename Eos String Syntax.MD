@@ -20,7 +20,10 @@
   Bringing A Channel to a certain level:
 
     <U1> $ group 1 at 57 #
-    
+  
+  Changing Parameters
+
+    <U1> $ chan 1 pan 32 tilt 40 #
     
   Clear Command Line:
 
