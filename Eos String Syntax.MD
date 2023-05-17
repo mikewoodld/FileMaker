@@ -47,7 +47,7 @@ You can edit various target text fields using this syntax:
 
          Field: Label, Scene, Notes, Patch
   
-         Target: Cue, Submaster, Macro, ...
+         Target: Cue, Submaster, Macro, Snapshot (see next section for Palettes)
   
          Number: Target Number x 10,000
   
@@ -92,6 +92,15 @@ You can edit various target text fields using this syntax:
      
           Set Text1 Database label in Patch for channel 61 to "Front Cool"
      
+       
+## Labeling Palettes      
+
+    <U1> $ focus_palette 1 label TextHere # 
+    <U1> $ intensity_palette 1 label TextHere # 
+    <U1> $ color_palette 1 label TextHere # 
+    <U1> $ beam_palette 1 label TextHere # 
+      
+  
 
 ## Forbidden Characters
 
